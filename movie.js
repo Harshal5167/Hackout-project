@@ -60,10 +60,6 @@ const showResults = (items) => {
                 poster_path = "./img-01.jpeg"
             }
 
-            if (original_title.length > 15) {
-                original_title = original_title.slice(0, 15) + "..."
-            }
-
             if (!overview) {
                 overview = "No overview yet..."
             }
@@ -78,12 +74,14 @@ const showResults = (items) => {
                 release_date,
                 overview,
             }
+
             content += movieCard(movieItem)
         })
     } else {
         content += "<p>Something went wrong!</p>"
     }
-    root.innerHTML = content 
+
+    root.innerHTML = content // Inject content to root
 }
 
 const handleLoadMore = () => {
