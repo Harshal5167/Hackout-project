@@ -37,12 +37,16 @@
     justify-content: center;
   }
   .row1 {
+    background-color: #101528;
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: flex;
     max-width: 1200px;
     gap: 15px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin:30px;
   }
   
   .wrapper {
@@ -153,4 +157,16 @@
   a {
     color: white;
     text-decoration: none;
+  }
+
+  #heading{
+    color: #ff7ac6;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    display: block;
+  }
+
+  .row3{
+    background-color: #101528;
   }

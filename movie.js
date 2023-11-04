@@ -12,8 +12,13 @@ let movies = [],
     inSearchPage = false
 const cardMedia=document.getElementById("card-media")
 
-const cardMediaOnClick=()=>{
-    console.log("hello")
+const cardMediaOnClick=(id)=>{
+    console.log("hello");
+    var div = document.createElement('div');
+    
+    const movieElement = document.getElementById(`${id}`);
+    div.appendChild(movieElement);
+    document.getElementById('root1').appendChild(div);
 }
 
 async function fetchData(URL) {
@@ -37,15 +42,15 @@ const getSpecificPage = (page) => {
 }
 
 const movieCard = (movie) =>
-    `<div class="col">
+    `<div class="col row-2-elements" id="${movie.id}">
           <div class="card">
-            <div class="card-media" id="card-media" onClick="cardMediaOnClick()">
+            <div class="card-media" id="card-media" onclick="cardMediaOnClick(${movie.id})">
               <img src="${movie.poster_path}" alt="PUBG Mobile" width="100%" />
             </div>
             <div class="card-content">
               <div class="card-cont-header">
                 <div class="cont-left">
-                  <h3 style="font-weight: 600">${movie.original_title}</h3>
+                  <h3 style="font-weight:600">${movie.original_title}</h3>
                   <span style="color: #ff7ac6">${movie.release_date}</span>
                 </div>
               </div>
@@ -57,7 +62,7 @@ const showResults = (items) => {
     let content = !inSearchPage ? root2.innerHTML : ""
     if (items && items.length > 0) {
         items.map((item) => {
-            let { poster_path, original_title, release_date, overview } = item
+            let { poster_path, original_title, release_date, overview, id } = item
 
             if (poster_path) {
                 poster_path = imgURL + poster_path
@@ -78,6 +83,7 @@ const showResults = (items) => {
                 original_title,
                 release_date,
                 overview,
+                id
             }
 
             content += movieCard(movieItem)
