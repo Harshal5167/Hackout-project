@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
+    <link rel="icon" type="image/x-icon" href="/images.png">
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
+    <div class="header">
+        <div class="logo"><h1>Movify</h1></div>
+        <div class="sideIcons">
+            <a class="home" href="/Home.html">Home</a>
+            <a class="profile" href="/profile.html">Profile</a>
+        </div>
+    </div>
     <div class="card-container">
-        <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-        <h3>Ricky Park</h3>
-        <h6>New York</h6>
-        <p>User interface designer and <br/> front-end developer</p>
-        <div class="buttons">
-            <button class="primary">
-                Message
-            </button>
-            <button class="primary ghost">
-                Following
-            </button>
+        <div class="left">
+            <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+            <h3>Ricky Park</h3>
+            <h6>New York</h6>
         </div>
-        <div class="skills">
-            <h6>Skills</h6>
-            <ul>
-                <li>UI / UX</li>
-                <li>Front End Development</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node</li>
-            </ul>
+        <div class="right">
+            <div class="informationHeader">
+                <div class="information">Information</div>
+                <div class="emailAndPhone">
+                    <div class="emailHeader">
+                        <div>Email</div>
+                        <div>ricky@gmail.com</div>
+                    </div>
+                    <div class="teamHeader">
+                        <div>Team</div>
+                        <div>Code##123</div>
+                    </div>
+                </div>
+            </div>
+            <div class="moviesWatched">Movies Watched</div>
         </div>
+    </div>
+    <div class="footer">
+        <div>copyright &copy; Dev Gurus</div>
     </div>
 </body>
 </html>

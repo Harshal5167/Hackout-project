@@ -19,6 +19,7 @@ const cardMediaOnClick=(id)=>{
     const movieElement = document.getElementById(`${id}`);
     div.appendChild(movieElement);
     document.getElementById('root1').appendChild(div);
+    document.querySelector('.invisible-div-3').classList.remove('invisible-div-3');
 }
 
 async function fetchData(URL) {
