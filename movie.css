@@ -24,8 +24,19 @@
     background: #ff7ac6;
     border-color: #ff7ac6;
   }
-  
-  .row {
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  .row2 {
+    display: flex;
+    max-width: 1200px;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .row1 {
     display: flex;
     max-width: 1200px;
     gap: 15px;
